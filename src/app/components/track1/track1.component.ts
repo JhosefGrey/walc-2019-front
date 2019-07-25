@@ -19,6 +19,7 @@ export class Track1Component implements OnInit {
   public preRequisitos = new Array()
   public track6: Boolean = false;
   public requisitosSoftWareTrack6;
+  public requisitosHardwareTrack6;
   constructor(private activatedRoute: ActivatedRoute, 
     private _userService: UserService) { 
       this.token = this._userService.getToken()
@@ -39,8 +40,9 @@ export class Track1Component implements OnInit {
         this.preRequisitos = this.track.preRequisito
         if (this.track._id == "5d39e4c2e7179a064fa9172c") {
           this.track6 = true;
-          console.log(this.preRequisitos[2].preReq.split(' '));
-          this.requisitosSoftWareTrack6 = this.preRequisitos[2].preReq.split(' ')
+          this.requisitosSoftWareTrack6 = ["Google", "Chrome", "Virtual-Box", "GIT", "Docker-toolbox", "Wireshark", "Postman", "Anaconda(Python)"]
+          this.requisitosHardwareTrack6 = ["Sistema operativo (Linux, Windows 8/10, masOSx 10.11/10.12)", "I5 Dual Core", 
+          "8G de RAM", "50G de disco duro disponible (mínimo)" ,"Conexión de red"]
         }
         
       }

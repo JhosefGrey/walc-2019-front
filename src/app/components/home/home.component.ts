@@ -1,20 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserService } from '../../services/user.service';
+import { Patrocinador } from '../../models/patrocinador.model';
 declare var $: any;
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  providers:[UserService]
 })
 export class HomeComponent implements OnInit {
-  
+  public patrocinador: Patrocinador
   constructor(
-    private _router: Router
-  ) { }
+    private _router: Router,
+    public _userService: UserService
+  ) {
+   }
 
   ngOnInit() {
-    
+    this.getPatrocinadores()  
   
     $(window).scroll(function() {
       if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
@@ -28,6 +33,16 @@ export class HomeComponent implements OnInit {
           scrollTop : 0                       // Scroll to top of body
       }, 500);
   });
+  }
+
+  getPatrocinadores(){
+    this._userService.getPatrocinadores().subscribe(
+      response=>{
+        this.patrocinador = response.patrocinador
+        console.log(this.patrocinador);
+        
+      }
+    )
   }
 
   public goTo(url, id) {

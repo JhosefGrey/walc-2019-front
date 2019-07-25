@@ -49,35 +49,45 @@
               </ng-template>
             </ngb-tab>
             <ngb-tab title="Pre-requisitos" *ngIf="track.preRequisito.length > 0">
-                <ng-template ngbTabContent>
-                  <div class="row following" id="follows">
-                    <div class="col-md-8 ml-auto mr-auto ">
-                      <ul class="list-unstyled follows">
-                        <li *ngFor="let pre of track.preRequisito">
-                          <div class="row row justify-content-md-center">
-                            <div class="col-md-8">
-                              <h6>{{pre.preReq}}<br /></h6>
-                            </div>
+              <ng-template ngbTabContent>
+                <div class="row following" id="follows">
+                  <div class="col-md-8 ml-auto mr-auto ">
+                    <ul class="list-unstyled follows">
+                      <li *ngFor="let pre of track.preRequisito">
+                        <div class="row row justify-content-md-center">
+                          <div class="col-md-8">
+                            <h6>{{pre.preReq}}<br /></h6>
                           </div>
-                          <hr />
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col-md-8 ml-auto mr-auto " *ngIf="track6 == true">
-                      <ul class="list-unstyled follows">
-                        <li *ngFor="let preTrack6 of requisitosSoftWareTrack6">
-                          <div class="row row justify-content-md-center">
-                            <div class="col-md-8">
-                              <h6>{{preTrack6}}<br /></h6>
-                            </div>
-                          </div>
-                          <hr />
-                        </li>
-                      </ul>
+                        </div>
+                        <hr />
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-8 ml-auto mr-auto " *ngIf="track6 == true">
+                    <div class="row row justify-content-md-center">
+                        <h6>Los participantes deben traer su computador portátil con los siguientes requerimientos:</h6>
+                        <div class="col-md-4">
+                            <h2>Software</h2>                            
+                            <ul class="list-group">
+                              <li *ngFor="let preTrack6 of requisitosSoftWareTrack6">
+                                <h6>{{preTrack6}}<br /></h6>
+                              </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h2>Hardware</h2>
+                            <ul class="list-group">
+                              <li *ngFor="let preTrackHard6 of requisitosHardwareTrack6">
+                                <h6>{{preTrackHard6}}<br /></h6>
+                              </li>
+                            </ul>
+                        </div>
+                      
                     </div>
                   </div>
-                </ng-template>
-              </ngb-tab>
+                </div>
+              </ng-template>
+            </ngb-tab>
             <ngb-tab title="Materiales" *ngIf="track.materiales">
               <ng-template ngbTabContent>
                 <div class="col-md-6 ml-auto mr-auto ">
@@ -92,6 +102,7 @@
                     <ul class="list-unstyled follows">
                       <li *ngFor="let age of track.agenda">
                         <div class="row row justify-content-md-center">
+
                           <div class="col-md-8">
                             <h6>{{age.dia}}<br /></h6>
                             <p>{{age.descripcionDia}}</p>
@@ -132,41 +143,41 @@
               </ng-template>
             </ngb-tab>
             <ngb-tab title="Temas" *ngIf="track.temasTrack.length > 0">
-                <ng-template ngbTabContent>
-                  <div class="row following" id="follows">
-                    <div class="col-md-6 ml-auto mr-auto ">
-                      <ul class="list-unstyled follows">
-                        <li *ngFor="let tem of track.temasTrack">
-                          <div class="row row justify-content-md-center">
-                            <div class="col-md-8">
-                              <h6>{{tem.descTemas}}<br /></h6>
-                            </div>
+              <ng-template ngbTabContent>
+                <div class="row following" id="follows">
+                  <div class="col-md-6 ml-auto mr-auto ">
+                    <ul class="list-unstyled follows">
+                      <li *ngFor="let tem of track.temasTrack">
+                        <div class="row row justify-content-md-center">
+                          <div class="col-md-8">
+                            <h6>{{tem.descTemas}}<br /></h6>
                           </div>
-                          <hr />
-                        </li>
-                      </ul>
-                    </div>
+                        </div>
+                        <hr />
+                      </li>
+                    </ul>
                   </div>
-                </ng-template>
-              </ngb-tab>
-              <ngb-tab title="Objetivos" *ngIf="track.objetivosTrack.length > 0">
-                  <ng-template ngbTabContent>
-                    <div class="row following" id="follows">
-                      <div class="col-md-6 ml-auto mr-auto ">
-                        <ul class="list-unstyled follows">
-                          <li *ngFor="let obj of track.objetivosTrack">
-                            <div class="row row justify-content-md-center">
-                              <div class="col-md-8">
-                                <h6>{{obj.descObjetivos}}<br /></h6>
-                              </div>
-                            </div>
-                            <hr />
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </ng-template>
-                </ngb-tab>
+                </div>
+              </ng-template>
+            </ngb-tab>
+            <ngb-tab title="Objetivos" *ngIf="track.objetivosTrack.length > 0">
+              <ng-template ngbTabContent>
+                <div class="row following" id="follows">
+                  <div class="col-md-6 ml-auto mr-auto ">
+                    <ul class="list-unstyled follows">
+                      <li *ngFor="let obj of track.objetivosTrack">
+                        <div class="row row justify-content-md-center">
+                          <div class="col-md-8">
+                            <h6>{{obj.descObjetivos}}<br /></h6>
+                          </div>
+                        </div>
+                        <hr />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </ng-template>
+            </ngb-tab>
 
           </ngb-tabset>
         </div>

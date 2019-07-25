@@ -25,6 +25,12 @@ export class UserService{
 
         return this._http.get('https://walc-2019.herokuapp.com/api/tracks', {headers: headers})
     }
+
+    getPatrocinadores(): Observable<any>{
+        let headers = new HttpHeaders().set('Content-Type', 'application/json')
+
+        return this._http.get('https://walc-2019.herokuapp.com/api/patrocinador/get/all', {headers: headers})
+    }
     register(user: User): Observable<any>{
         let params = JSON.stringify(user);
 

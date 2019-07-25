@@ -50,7 +50,7 @@
                             <i class="nc-icon nc-tap-01" style="font-size: 7em;"></i>
                         </div>
                         <div class="card-block">
-                            <a href="http://eslared.net/walc2019/?page_id=82&lang=es_ES">
+                            <a  routerLink="/track/5d38b12c53b67b0024b2745d">
                                 <div class="author">
                                     <h4 class="card-title">Hands on IPv6</h4>
                                 </div>
@@ -64,7 +64,7 @@
                             </p>
                         </div>
                         <div class="card-footer text-center">
-                            <a href=" http://eslared.net/walc2019/?page_id=82&lang=es_ES"
+                            <a routerLink="/track/5d38b12c53b67b0024b2745d"
                                 class="btn btn-outline-warning btn-round">Ver más</a>
                         </div>
                     </div>
@@ -76,7 +76,7 @@
                             <i class="nc-icon nc-sound-wave" style="font-size: 7em;"></i>
                         </div>
                         <div class="card-block">
-                            <a href="http://eslared.net/walc2019/?page_id=84&lang=es_ES">
+                            <a routerLink="/track/5d39c8efe7179a064fa90963">
                                 <div class="author">
                                     <h4 class="card-title">Gestión y monitoreo de redes</h4>
                                 </div>
@@ -211,42 +211,21 @@
     </div>
 
     <div class="section landing-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 mr-auto ml-auto">
-                    <h2 class="text-center">Keep in touch?</h2>
-                    <form class="contact-form">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>Name</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="nc-icon nc-single-02"></i></span>
-                                    </div>
-                                    <input type="text" class="form-control" placeholder="Name">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <label>Email</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"> <i class="nc-icon nc-email-85"></i></span>
-                                    </div>
-                                    <input type="text" class="form-control" placeholder="Email">
-                                </div>
-                            </div>
+            <div class="container">
+                <div class="slider">
+                    <div class="slide-track">
+                        <div class="slide" *ngFor="let patro of patrocinador">
+                            
+                            <img [ngClass]="{'top-margen': patro.height < 120 }" src="{{patro.image}}" height="{{patro.height}}" width="{{patro.width}}"/>
+                           
+                            
                         </div>
-                        <label>Message</label>
-                        <textarea class="form-control" rows="4"
-                            placeholder="Tell us your thoughts and feelings..."></textarea>
-                        <div class="row">
-                            <div class="col-md-4 mr-auto ml-auto">
-                                <button class="btn btn-warning btn-lg btn-fill">Send Message</button>
-                            </div>
+                        <div class="slide" *ngFor="let patro of patrocinador">
+                                <img [ngClass]="{'top-margen': patro.height < 120 }" src="{{patro.image}}" height="{{patro.height}}" width="{{patro.width}}" />
                         </div>
-                    </form>
+                        
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 </div>
