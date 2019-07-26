@@ -22,8 +22,18 @@
       <form class="form-inline my-2 my-lg-0">
           <a class="btn btn-info btn-link"
             routerLink="/login" *ngIf="!token" >Iniciar Sesion</a>
-          <a class="btn btn-info btn-link"
-            routerLink="/usuarios" *ngIf="admin" >Usuarios</a>
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <div ngbDropdown class="d-inline-block dropdown" *ngIf="admin">
+                <a class="nav-link" id="dropdownBasic1" ngbDropdownToggle>Usuarios</a>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-primary" >
+                  <a  routerLink="/users"  class="dropdown-item" >Todos los usuarios</a>
+                  <a  routerLink="/users"  class="dropdown-item" >Usuarios por conferencia</a>
+                  <a  routerLink="/users"  class="dropdown-item" >Usuarios por Color</a>
+                </div>
+              </div>
+          </li>
+        </ul>
           <a class="btn btn-info btn-link" routerLink="/register" *ngIf="!token">Registrase</a>
           <a class="btn btn-info btn-link"
             routerLink="/perfil" *ngIf="token">PERFIL</a>

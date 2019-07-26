@@ -1,0 +1,108 @@
+
+$shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+$shadow1: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+img{
+	max-width:100%;
+}
+
+body{
+	background-color:white;
+	display:flex;
+	width:100%;
+	font-family:'Montserrat';
+}
+
+.container{
+	width:1600px;
+	max-width:100%;
+	margin:auto;
+}
+
+.display{	
+	display:flex;
+	justify-content:space-around;
+	flex-wrap:wrap;
+	.display-item{
+		flex-grow:1;
+		flex-basis:1px;
+		display:flex;
+		justify-content:space-around;
+		padding:15px;
+		max-width:100%;
+	}
+}
+
+.card{
+	width:380px;
+	max-width:100%;
+	min-height:420px;
+	overflow:hidden;
+	border-radius:4px;
+	box-shadow:$shadow;
+	background-color:white;
+	position:relative;	
+	display: -webkit-box; 
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex; 
+	display: flex;
+	flex-direction:column;
+	.card-top{
+		-webkit-flex-basis:155px;
+		flex-basis:155px;
+		flex-shrink:1;
+		background-color:rgba(0,0,0,.2);		
+		background-position:center;
+		background-size:cover;	
+	}
+	.card-profile{
+		flex-basis:75px;
+		flex-shrink:1;
+		.profile-image{
+			overflow:hidden;
+			border-radius:100%;
+			position:absolute;
+			left:calc(50% - 75px);
+			top:calc(25% - 75px);
+			border:4px solid white;
+			width:150px;
+			height:150px;			
+			background-size:cover;
+			background-position:center;
+		}
+	}
+	.card-info{
+		flex-basis:56,66665%;
+		flex-grow:1;
+		padding:0 15px;
+		text-align:center;
+		display: -webkit-box; 
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex; 
+		display: flex;
+		flex-direction:column;
+		.info-title{
+			padding-bottom:15px;
+			h3{
+				font-weight:400;
+			}
+		}
+		.info-bio{
+			padding:15px 0;
+		}
+	}
+}
+
+.card.seamus{
+	.card-top{
+		background-image: url(https://images.wallpaperscraft.com/image/glitch_art_lines_pixels_121670_4096x2304.jpg);
+	}
+}

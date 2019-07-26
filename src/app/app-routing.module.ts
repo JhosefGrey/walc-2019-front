@@ -10,6 +10,7 @@ const routes: Routes = [
   {path:'login', loadChildren: './components/login/login.module#LoginModule'},
   {path:'register', loadChildren: './components/registro/registro.module#RegistroModule'},
   {path:'conferencias', loadChildren: './components/conferencias/conferencias.module#ConferenciasModule'},
+  {path:'users', loadChildren: './components/usuarios/usuarios.module#UsuariosModule'},
   {path:'**', loadChildren: './components/home/home.module#HomeModule'}
 ];
 
