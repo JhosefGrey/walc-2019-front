@@ -1,22 +1,110 @@
-<body style="margin-top:5%; margin-bottom: 5%">
-  <div class="row">
-    <div class="col-md-3" *ngFor='let user of users'>
-      <div class="container">
-        <div class="display">
-          <div class="display-item">
-            <div class="card seamus">
-              <div class="card-top"></div>
-              <div class="card-profile">
-                <div class="profile-image">
-                  <img class="mb-4"
-                    src="https://www.edmontoncorporatechallenge.com/Sports%20Icons/unknown-challenge.png" alt="">
+<body style="margin-top:10%;">
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+        aria-controls="nav-home" aria-selected="true">No registrados</a>
+      <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+        aria-controls="nav-profile" aria-selected="false">Pre-Registrados</a>
+      <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
+        aria-controls="nav-contact" aria-selected="false">Registrados</a>
+    </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+      <div class="row">
+        <div class="col-md-3" *ngFor='let user of users'>
+          <div class="container">
+            <div class="display">
+              <div class="display-item">
+                <div class="card seamus">
+                  <div class="card-top"></div>
+                  <div class="card-profile">
+                    <div class="profile-image">
+                      <img class="mb-4"
+                        src="https://www.edmontoncorporatechallenge.com/Sports%20Icons/unknown-challenge.png" alt="">
+                    </div>
+                  </div>
+                  <div class="card-info">
+                    <div class="info-title">
+                      <h2>{{user.nombre}}</h2>
+                      <h6>{{user.email}}</h6>
+                      <h5>{{user.rol}}</h5>
+                    </div>
+                    <select id="inputState" class="form-control">
+                      <option selected>Blanco</option>
+                      <option>Rojo</option>
+                      <option>Azul</option>
+                      <option>Amarillo</option>
+                    </select>
+                  </div>
                 </div>
               </div>
-              <div class="card-info">
-                <div class="info-title">
-                  <h2>{{user.nombre}}</h2>
-                  <h5>{{user.email}}</h5>
-                  <h5>{{user.rol}}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+      <div class="row">
+        <div class="col-md-3" *ngFor='let user of users'>
+          <div class="container">
+            <div class="display">
+              <div class="display-item">
+                <div class="card seamus">
+                  <div class="card-top"></div>
+                  <div class="card-profile">
+                    <div class="profile-image">
+                      <img class="mb-4"
+                        src="https://www.edmontoncorporatechallenge.com/Sports%20Icons/unknown-challenge.png" alt="">
+                    </div>
+                  </div>
+                  <div class="card-info">
+                    <div class="info-title">
+                      <h2>{{user.nombre}}</h2>
+                      <h6>{{user.email}}</h6>
+                      <h5>{{user.rol}}</h5>
+                    </div>
+                    <select id="inputState" class="form-control">
+                      <option selected>Blanco</option>
+                      <option>Rojo</option>
+                      <option>Azul</option>
+                      <option>Amarillo</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+      <div class="row">
+        <div class="col-md-3" *ngFor='let user of users'>
+          <div class="container">
+            <div class="display">
+              <div class="display-item">
+                <div class="card seamus">
+                  <div class="card-top"></div>
+                  <div class="card-profile">
+                    <div class="profile-image">
+                      <img class="mb-4"
+                        src="https://www.edmontoncorporatechallenge.com/Sports%20Icons/unknown-challenge.png" alt="">
+                    </div>
+                  </div>
+                  <div class="card-info">
+                    <div class="info-title">
+                      <h2>{{user.nombre}}</h2>
+                      <h6>{{user.email}}</h6>
+                      <h5>{{user.rol}}</h5>
+                    </div>
+                    <select id="inputState" class="form-control">
+                      <option selected>Blanco</option>
+                      <option>Rojo</option>
+                      <option>Azul</option>
+                      <option>Amarillo</option>
+                    </select>
+                  </div>
                 </div>
               </div>
             </div>

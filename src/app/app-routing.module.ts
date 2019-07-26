@@ -11,6 +11,8 @@ const routes: Routes = [
   {path:'register', loadChildren: './components/registro/registro.module#RegistroModule'},
   {path:'conferencias', loadChildren: './components/conferencias/conferencias.module#ConferenciasModule'},
   {path:'users', loadChildren: './components/usuarios/usuarios.module#UsuariosModule'},
+  {path:'usersXtrack', loadChildren: './components/usuario-track/usuario-track.module#UsuarioTrackModule'},
+  {path:'usersXcolor', loadChildren: './components/usuario-color/usuario-color.module#UsuarioColorModule'},
   {path:'**', loadChildren: './components/home/home.module#HomeModule'}
 ];
 
